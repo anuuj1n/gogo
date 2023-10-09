@@ -11,7 +11,6 @@
 .container {
     display: flex;
     justify-content: center;
-    background-image: linear-gradient(180deg, #fff, #f7f7f7);
 }
 
 .main {
@@ -293,23 +292,53 @@
     flex-direction: row;
     position: relative;
     aspect-ratio: 1/1;
-    border: 1px solid red;
 }
 
-input:checked~.click2 {
+.hoyrburunhi {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    padding: 8px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.button11 {
+    width: 7px;
+    height: 7px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.button12 {
+    width: 7px;
+    height: 7px;
+    background-color: #2b8ab0;
+    border-radius: 50%;
+}
+
+.hoyrburunhi:has(input:checked)~.click2 {
     opacity: 1;
 }
-
-
-
-
-
 
 .checkboxx {
     position: absolute;
     z-index: 5;
     right: 0;
     bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.checkboxx:checked~.button11 {
+    background-color: #00b0f4;
+}
+
+.checkboxx:checked~.button12 {
+    background-color: #000;
 }
 
 .nemsen {
@@ -418,7 +447,7 @@ input:checked~.click2 {
 
 .uzeh:hover+.bichig3 {
     opacity: 1;
-    z-index: 200;
+    z-index: 300;
 }
 
 #hevmayg {
@@ -614,6 +643,7 @@ input:checked~.click2 {
 .zrgg-container {
     flex-grow: 1;
     flex-basis: 0;
+    overflow: hidden;
 }
 
 .zrgg {
@@ -750,7 +780,7 @@ input:checked~.click2 {
     position: relative;
 }
 
-.tom1:hover .imggg {
+.tom1:hover .imgggg {
     transform: scale(1.1);
     transition: 300ms;
 }
@@ -794,14 +824,24 @@ input:checked~.click2 {
     margin: 0;
 }
 
-.yriltslgaimg {
-    overflow: hidden;
+.imggg {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
 }
 
 .yriltslgaimg img {
     display: block;
     width: 100%;
 }
+
+
+
+.yriltslgaimg {
+    overflow: hidden;
+}
+
 
 .tom1dotorh {
     position: absolute;
@@ -890,13 +930,6 @@ input:checked~.click2 {
     width: 100%;
 }
 
-
-.imggg {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    position: absolute;
-}
 
 
 
@@ -1064,7 +1097,7 @@ input:checked~.click2 {
 .live img {
     position: absolute;
     z-index: 2;
-
+    border-radius: 5px;
 }
 
 .zz {
@@ -1075,6 +1108,10 @@ input:checked~.click2 {
 .zz:hover {
     transform: scale(1.1);
     transition: 300ms;
+}
+
+.zz:hover .live img {
+    border-radius: 5px;
 }
 
 .blackparttittle {
@@ -1145,6 +1182,12 @@ input:checked~.click2 {
     flex-basis: 0;
 }
 
+.hyrym {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
 .bidnituhai {
     display: flex;
     flex-direction: row;
@@ -1175,10 +1218,6 @@ input:checked~.click2 {
     height: 60%;
 }
 
-
-
-
-
 .emojis {
     width: 15px;
     height: 20px;
@@ -1197,4 +1236,200 @@ input:checked~.click2 {
 
 .social:hover {
     color: #1a1a1a;
+}
+
+@media screen and (max-width: 460px) {
+    .main {
+        width: 460px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin-top: 50px;
+    }
+
+
+    .separatepart {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .ontsloh {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hovernud {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .paragpart {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 3;
+        flex-basis: 0;
+        gap: 40px;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-bottom: 1px dashed rgba(0, 0, 0, .08);
+    }
+
+    .headarticle {
+        opacity: 0;
+    }
+
+    .mainarticle {
+        font-weight: 400;
+        font-size: 15px;
+        position: absolute;
+    }
+
+    .zrgg-container {
+        flex-grow: 1;
+        flex-basis: 0;
+        overflow: hidden;
+    }
+
+    .zrgg {
+        width: 105px;
+        height: 110px;
+    }
+
+    .firstwhite {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        width: 460px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .durvnym {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .gogofooter {
+        display: flex;
+        flex-grow: 1;
+        flex-basis: 0;
+        justify-content: center;
+    }
+
+    .secondwhite {
+        width: 460px;
+        background-color: white;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .logos {
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .jijkenym p {
+        font-size: 12px;
+
+    }
+
+    .jijkenym {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    .navbar {
+        opacity: 0;
+    }
+
+    .three {
+        position: absolute;
+        right: 20px;
+    }
+
+    .blackpart {
+        display: flex;
+        flex-direction: column;
+        background-color: #1a1a1a;
+        width: 460px;
+        gap: 100px;
+        padding-bottom: 100px;
+    }
+
+    .hundlunblack1 {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        flex-grow: 1;
+        flex-basis: 0;
+        width: 100%;
+    }
+
+
+    .hundlunblack2 {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        flex-grow: 1;
+        flex-basis: 0;
+        width: 100%;
+    }
+
+
+    .yriltslgafull {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .tom2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .iher {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .iher1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tom1 {
+
+        position: relative;
+    }
+
+    .tom2 {
+        display: flex;
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .gogohevmaygmain {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .munhsaruul {
+        opacity: 0;
+    }
+
+    .egch {
+        position: absolute;
+    }
+
 }
